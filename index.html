@@ -1,0 +1,98 @@
+                        <!-- Login Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="Login2.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        *{
+            font-family: Amazon Ember,Arial,sans-serif;
+            background-color: #ffffff3a;
+        }
+        section{
+            height: 400px;
+            width: 500px;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            top: 12%;
+            transform: translate(-50%);
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+        }
+        .login-form{
+            left: 10%;
+        }
+        #image{
+            position: absolute;
+            height: 10%;
+            width: 10%;
+            left: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #image img{
+            height: 100%;
+            width: 100%;
+            background-size:cover;
+            /* color: black; */
+        }
+        button{
+            border: 1px solid rgb(244, 244, 150);
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div id="image">
+        <!-- <img src="amazon_logo.png" alt=""> -->
+        <img src="https://api.freelogodesign.org/assets/blog/img/20180911090509731amazon_logo_RGB.jpg" alt="">
+    </div>
+    <section>
+        <h1>Sign in</h1>
+        <div class="login-form">
+            <h4>Username</h4>
+            <div class="username-input">
+                <i class="ri-user-fill"></i>
+                <input type="email" placeholder="Enter Username" id="username">
+            </div>
+            <!-- Password -->
+            <h4>Password</h4>
+            <div class="password">
+                <i class="ri-lock-line"></i>
+                <input type="password" placeholder="Enter Password" id="password">
+            </div>
+            <p>Forgot Password</p>
+        </div>
+        <button s class="login-btn" onclick="fun()">
+            LOGIN
+        </button>
+        <div class="alternative-signuo">
+            <p>Not authorised <span>Sign-Up</span></p>
+        </div>
+    </section>
+
+    <script>
+        function fun(){
+            var email=document.getElementById("username").value;
+            var pass=document.getElementById("password").value;
+
+            if(email=='shivamraid232002@gmail.com' && pass=='123456'){
+                window.location.assign("index1.html")
+            }
+            else{
+                alert(console.log("wrong entry"))
+            }
+        }
+
+    </script>
+</body>
+</html>
